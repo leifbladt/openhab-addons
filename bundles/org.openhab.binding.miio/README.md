@@ -231,6 +231,7 @@ Currently the miio binding supports more than 330 different models.
 | Dreame Robot Vacuum D9             | miio:basic       | [dreame.vacuum.p2009](#dreame-vacuum-p2009) | Yes          |            |
 | Dreame Bot W10                     | miio:basic       | [dreame.vacuum.p2027](#dreame-vacuum-p2027) | Experimental | Experimental support. Please report back if all channels are functional. Preferably share the debug log of property refresh and command responses |
 | Dreame Bot Z10 Pro                 | miio:basic       | [dreame.vacuum.p2028](#dreame-vacuum-p2028) | Experimental | Experimental support. Please report back if all channels are functional. Preferably share the debug log of property refresh and command responses |
+| Dreame Bot L10 Pro                 | miio:basic       | [dreame.vacuum.p2029](#dreame-vacuum-p2029) | Experimental | Experimental support. Please report back if all channels are functional. Preferably share the debug log of property refresh and command responses |
 | Trouver Robot LDS Vacuum-Mop Finder | miio:basic       | [dreame.vacuum.p2036](#dreame-vacuum-p2036) | Yes          |            |
 | Mi Robot Vacuum-Mop 2 Pro+         | miio:basic       | [dreame.vacuum.p2041o](#dreame-vacuum-p2041o) | Experimental | Experimental support. Please report back if all channels are functional. Preferably share the debug log of property refresh and command responses |
 | MOVA Z500 Robot Vacuum and Mop Cleaner | miio:basic       | [dreame.vacuum.p2156o](#dreame-vacuum-p2156o) | Experimental | Experimental support. Please report back if all channels are functional. Preferably share the debug log of property refresh and command responses |
@@ -1251,6 +1252,8 @@ Note, not all the values need to be in the json file, e.g. a subset of the param
 | auto_collect         | Number               | Collect Dust - Auto Collect              | Value mapping `["0"="Close-auto-collect","1"="Open-auto-collect"]` |
 | clean_times          | Number               | Collect Dust - Clean Times               |            |
 | dust_enable          | Number               | Collect Dust - Dust Enable               | Value mapping `["0"="Disable","1"="Enable"]` |
+
+### Dreame Bot L10 Pro (<a name="dreame-vacuum-p2029">dreame.vacuum.p2029</a>) Channels
 
 ### Trouver Robot LDS Vacuum-Mop Finder (<a name="dreame-vacuum-p2036">dreame.vacuum.p2036</a>) Channels
 

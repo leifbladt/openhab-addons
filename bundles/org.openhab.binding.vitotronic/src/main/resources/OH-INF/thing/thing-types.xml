@@ -17,6 +17,7 @@
 			<channel id="systemtime" typeId="systemtime"/>
 			<channel id="outside_temp" typeId="outside_temp"/>
 			<channel id="boiler_temp" typeId="boiler_temp"/>
+			<channel id="boiler_setpoint_temp" typeId="boiler_setpoint_temp"/>
 			<channel id="malfunction" typeId="malfunction"/>
 		</channels>
 	</thing-type>
@@ -50,6 +51,7 @@
 			<channel id="airshutter_prim" typeId="airshutter_prim"/>
 			<channel id="airshutter_sec" typeId="airshutter_sec"/>
 			<channel id="lambdasensor" typeId="lambdasensor"/>
+			<channel id="lambdasensor_temp" typeId="lambdasensor_temp"/>
 			<channel id="fanspeed" typeId="fanspeed"/>
 			<channel id="fanspeed_target" typeId="fanspeed_target"/>
 			<channel id="error" typeId="error"/>
@@ -98,6 +100,8 @@
 			<channel id="middle_temp" typeId="middle_temp"/>
 			<channel id="bottom_temp" typeId="bottom_temp"/>
 			<channel id="circuitpump" typeId="circuitpump"/>
+			<channel id="boiler_pump" typeId="boiler_pump"/>
+			<channel id="storagetank_pump" typeId="storagetank_pump"/>
 		</channels>
 	</thing-type>
 
@@ -330,6 +334,14 @@
 		<state pattern="%.1f °C" readOnly="true"/>
 	</channel-type>
 
+	<channel-type id="boiler_setpoint_temp">
+		<item-type>Number</item-type>
+		<label>Boiler</label>
+		<description>Temperature sensor of boiler (fireplace)</description>
+		<category>Temperature</category>
+		<state pattern="%.1f °C" readOnly="true"/>
+	</channel-type>
+
 	<channel-type id="malfunction">
 		<item-type>Switch</item-type>
 		<label>Heating Malfunction</label>
@@ -368,6 +380,13 @@
 		<label>Lambdasensor (O2)</label>
 		<description>Oxygen content of the exhaust air</description>
 		<state pattern="%.2f %%" readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="lambdasensor_temp" advanced="true">
+		<item-type>Number</item-type>
+		<label>Lambdasensor Temperature</label>
+		<description>Temperature of exhaust air</description>
+		<state pattern="%.1f °C" readOnly="true"/>
 	</channel-type>
 
 	<channel-type id="airshutter_prim" advanced="true">
@@ -469,6 +488,20 @@
 		<item-type>Switch</item-type>
 		<label>Circuit Pump</label>
 		<description>Circuit pump state</description>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="boiler_pump">
+		<item-type>Switch</item-type>
+		<label>Boiler Pump</label>
+		<description>Boiler pump state</description>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="storagetank_pump">
+		<item-type>Switch</item-type>
+		<label>Storage tank Pump</label>
+		<description>Storage tank pump state</description>
 		<state readOnly="true"/>
 	</channel-type>
 
